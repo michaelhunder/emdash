@@ -1,5 +1,23 @@
 # @emdash-cms/admin
 
+## 1.2.1
+
+### Patch Changes
+
+- [#3970](https://github.com/emdash-cms/emdash/pull/3970) [`983c08c`](https://github.com/emdash-cms/emdash/commit/983c08c743e0a85447b268c3f10e112fbb1f6566) Thanks [@marcin-misiewicz-pl](https://github.com/marcin-misiewicz-pl)! - Completes the Polish (`pl`) admin translation. Polish admins now see localized text across the whole admin, including the publishing calendar, the editor, the Change domain dialog, bylines, relations, site transfer, backups, the plugin registry, and passkey setup. Previously, 2,255 of 3,384 strings fell back to English. Existing Polish strings now use consistent terminology: „witryna” for site, „wersja” for revision, and „klucz dostępu” for passkey, matching the wording Polish users see in Apple, Google, and Windows system prompts. Four strings that displayed a stray `msgstr` prefix are also fixed.
+
+- [#3954](https://github.com/emdash-cms/emdash/pull/3954) [`15bbfd7`](https://github.com/emdash-cms/emdash/commit/15bbfd7da186f82083454e408434407979a05190) Thanks [@Zahid09987](https://github.com/Zahid09987)! - Updates Indonesian (`id`) translations in the admin UI.
+
+- [#3961](https://github.com/emdash-cms/emdash/pull/3961) [`e0363c3`](https://github.com/emdash-cms/emdash/commit/e0363c3c68364eb1727f10f285b7a988206788c7) Thanks [@Zahid09987](https://github.com/Zahid09987)! - Updates Indonesian (`id`) translations in the admin UI.
+
+- [#3926](https://github.com/emdash-cms/emdash/pull/3926) [`0861e24`](https://github.com/emdash-cms/emdash/commit/0861e24be3f5b538fc44218a79dfc7e818f5709e) Thanks [@danielmlr](https://github.com/danielmlr)! - Fixes the error message shown when publishing, unpublishing, scheduling, unscheduling, or discarding changes fails without a server message, so it follows the admin language instead of staying in English. Most other admin requests that fail without a server message also no longer append an English HTTP status text such as "Internal Server Error" to their error message.
+
+- [#3977](https://github.com/emdash-cms/emdash/pull/3977) [`d4efb97`](https://github.com/emdash-cms/emdash/commit/d4efb97541e796bc02f90da15ceb3ca4c1c31895) Thanks [@kegren](https://github.com/kegren)! - Translates the Swedish admin strings added since 1.1, including the redesigned content editor, video blocks, the publishing calendar, scheduled changes and the domain move flow.
+
+- [#3936](https://github.com/emdash-cms/emdash/pull/3936) [`0e8811d`](https://github.com/emdash-cms/emdash/commit/0e8811d6f46fa88b09f2a46c7c1513fbb8cbc7cf) Thanks [@khoinguyenpham04](https://github.com/khoinguyenpham04)! - Updates `/video`, and **Video** in the add-block menu, to open the video picker first, as `/image` does. The video block is added once you choose a video, and closing the picker adds nothing. A video block saved without a video, such as one left empty by an earlier version, shows as unplayable, with **Replace video** to choose one and **Delete video** to remove it. Blocks chosen from a picker opened by the add-block menu also stay where the menu was if an upload finishes while the picker is open.
+- Updated dependencies []:
+  - @emdash-cms/blocks@1.2.1
+
 <!-- emdash-changelog-archive: ./changelog/0.16.0-to-0.38.0.md -->
 
 ## 1.2.0

@@ -1,5 +1,15 @@
 # @emdash-cms/cloudflare
 
+## 1.2.1
+
+### Patch Changes
+
+- [#3886](https://github.com/emdash-cms/emdash/pull/3886) [`f16f9f7`](https://github.com/emdash-cms/emdash/commit/f16f9f7f38a97ebdcc077e0f73cb0db1fb3227c8) Thanks [@emdashbot](https://github.com/apps/emdashbot)! - Fixes sandboxed plugins' `ctx.media.readBytes()` calls failing with "Media storage is not configured" under concurrent requests on Cloudflare Workers with an R2 `MEDIA` binding. Sites without that binding continue to use the existing storage callback fallback.
+  
+  Updates `createPluginRuntimeTestHost()` to store media fixtures and uploads in its local R2 binding, so plugins can read their bytes through the production bridge.
+- Updated dependencies [[`291e0f8`](https://github.com/emdash-cms/emdash/commit/291e0f8b5fef4e8ab81635076572499b8a6d0f81), [`57e6507`](https://github.com/emdash-cms/emdash/commit/57e6507be57829af3eca45d095cf813b0e22eb11), [`24d5ea4`](https://github.com/emdash-cms/emdash/commit/24d5ea4bda6d7f002de8ce8344e2c12aee0d49b5), [`2652774`](https://github.com/emdash-cms/emdash/commit/2652774d50a341392f26d69ed020528b1d92d7e8), [`57e6507`](https://github.com/emdash-cms/emdash/commit/57e6507be57829af3eca45d095cf813b0e22eb11)]:
+  - emdash@1.2.1
+
 <!-- emdash-changelog-archive: ./changelog/0.0.2-to-0.23.0.md -->
 
 ## 1.2.0

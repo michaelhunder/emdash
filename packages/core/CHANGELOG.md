@@ -1,5 +1,26 @@
 # emdash
 
+## 1.2.1
+
+### Patch Changes
+
+- [#3955](https://github.com/emdash-cms/emdash/pull/3955) [`291e0f8`](https://github.com/emdash-cms/emdash/commit/291e0f8b5fef4e8ab81635076572499b8a6d0f81) Thanks [@khoinguyenpham04](https://github.com/khoinguyenpham04)! - Fixes `<CommentForm>` making right-to-left pages (`<html dir="rtl">`) about 10,000 pixels wider, with a horizontal scrollbar. This happened on every such page in Firefox, and in Chrome and Safari when the form or an element around it is positioned, for example with `position: relative`. On right-to-left pages, `<Comments>` now also indents threaded replies from the right, and the separator before a signed-in commenter's email in `<CommentForm>` no longer touches the email.
+
+- [#3942](https://github.com/emdash-cms/emdash/pull/3942) [`57e6507`](https://github.com/emdash-cms/emdash/commit/57e6507be57829af3eca45d095cf813b0e22eb11) Thanks [@khoinguyenpham04](https://github.com/khoinguyenpham04)! - Fixes the visual-editing rich text editor adding a revision to the entry's history every time it saves on blur. Its saves now replace the pending draft revision, like the admin editor's autosave.
+
+- [#3202](https://github.com/emdash-cms/emdash/pull/3202) [`24d5ea4`](https://github.com/emdash-cms/emdash/commit/24d5ea4bda6d7f002de8ce8344e2c12aee0d49b5) Thanks [@eisenbruch](https://github.com/eisenbruch)! - Fixes full-text search so queries containing lowercase words like "and", "or", "not" or "near" are no longer parsed as FTS5 operators. This restores results for searches with possessive apostrophes and keeps prefix matching for those queries.
+
+- [#3584](https://github.com/emdash-cms/emdash/pull/3584) [`2652774`](https://github.com/emdash-cms/emdash/commit/2652774d50a341392f26d69ed020528b1d92d7e8) Thanks [@swissky](https://github.com/swissky)! - Removes up to two database round trips from the first request after a cold start on sites with the plugin marketplace or registry enabled.
+  
+  With the sandbox disabled (`sandbox: false`), a failure to load the in-process plugin adapter now stops startup with an error instead of silently starting without any marketplace plugins, matching how sandboxed plugins listed in the integration config already behave.
+
+- [#3942](https://github.com/emdash-cms/emdash/pull/3942) [`57e6507`](https://github.com/emdash-cms/emdash/commit/57e6507be57829af3eca45d095cf813b0e22eb11) Thanks [@khoinguyenpham04](https://github.com/khoinguyenpham04)! - Fixes visual editing for empty Portable Text fields, such as the body of a new post. Edit mode now renders the inline editor for them, so the field can be written on the page instead of having no editor at all. The empty editor stays blank until it is clicked, then shows a "Type / for commands..." hint. In edit mode, an empty Portable Text field reads as an empty array instead of `null`.
+- Updated dependencies [[`983c08c`](https://github.com/emdash-cms/emdash/commit/983c08c743e0a85447b268c3f10e112fbb1f6566), [`15bbfd7`](https://github.com/emdash-cms/emdash/commit/15bbfd7da186f82083454e408434407979a05190), [`e0363c3`](https://github.com/emdash-cms/emdash/commit/e0363c3c68364eb1727f10f285b7a988206788c7), [`0861e24`](https://github.com/emdash-cms/emdash/commit/0861e24be3f5b538fc44218a79dfc7e818f5709e), [`d4efb97`](https://github.com/emdash-cms/emdash/commit/d4efb97541e796bc02f90da15ceb3ca4c1c31895), [`0e8811d`](https://github.com/emdash-cms/emdash/commit/0e8811d6f46fa88b09f2a46c7c1513fbb8cbc7cf)]:
+  - @emdash-cms/admin@1.2.1
+  - @emdash-cms/auth@1.2.1
+  - @emdash-cms/blocks@1.2.1
+  - @emdash-cms/gutenberg-to-portable-text@1.2.1
+
 <!-- emdash-changelog-archive: ./changelog/0.39.1-to-0.42.0.md -->
 
 ## 1.2.0
